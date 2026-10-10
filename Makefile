@@ -19,7 +19,10 @@ build/%.rxbin: %.crexx
 test: all
 	./tests/run.sh
 
+ide-test:
+	python3 tests/ide_test.py
+
 clean:
 	rm -rf build
 
-.PHONY: all test clean
+.PHONY: all test ide-test clean
